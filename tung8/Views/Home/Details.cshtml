@@ -1,0 +1,16 @@
+﻿@model tung8.Models.Employee
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@Model.Name</title>
+</head>
+
+<body>
+    <h1>@Model.Name</h1>
+    <div>Id: @Model.ID</div>
+
+    <div>
+        @Html.ActionLink("Home", "Index")
+    </div>
+
+</body>
+</html>

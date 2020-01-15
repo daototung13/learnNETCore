@@ -1,0 +1,25 @@
+﻿@model HomePageViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+<table>
+    @foreach (var employee in Model.Employees)
+    {
+        <tr>
+            <td>@employee.Name</td>
+
+            <td>
+                <a style="color: orangered" asp-controller="Home" asp-action="Details"
+                   asp-routeid="@employee.ID">Details</a>
+
+                <a style="color: darkslateblue" asp-controller="Home" asp-action="Edit"
+                   asp-routeid="@employee.ID">Edit</a>
+
+            </td>
+        </tr>
+
+    }
+</table>
